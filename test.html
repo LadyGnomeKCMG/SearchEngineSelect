@@ -180,12 +180,27 @@
   border:3px solid black;
 }
 
+
 #footer {
     position:fixed;
     right:0;
     top:0;
     margin: 15px;
 }
+#footer2 {
+    position:fixed;
+    left:0;
+    top:0;
+    margin: 15px;
+}
+#footer3 {
+    position:fixed;
+    left:40%;
+    right:40%;
+    top:0;
+    margin: 15px;
+}
+
 #footerback,
 #footernext {
     text-align: center;  
@@ -197,6 +212,31 @@
     margin-right: 5px;
     border: 3px solid black;      
 }
+#footerback2,
+#footernext2 {
+    text-align: center;  
+    background-color: white;
+    font-family: arial;
+    float: left;
+    padding:5px;
+    border-radius: 20px;
+    margin-right: 5px;
+    border: 3px solid black;      
+}
+#footerback3,
+#footernext3 {
+    text-align: center;  
+    background-color: white;
+    font-family: arial;
+    float: left;
+    padding:5px;
+    height:30px;
+    width:300px;
+    border-radius: 20px;
+    margin-right: 5px;
+    border: 3px solid black;      
+}
+
 .overlay {
   height: 100%;
   width: 100%;
@@ -249,6 +289,10 @@
 <div id="footer">
     <div id="footerback" onclick="openNav()" style="cursor: pointer;width:20px;"><i class='fa fa-cog'></i></div>
     <div id="footernext" onclick="openNav2()" style="cursor: pointer; width:20px;"><i class='fa fa-info'></i></div>
+</div>
+
+<div id="footer2">
+    <div id="footerback2" onclick="openNav()" style="cursor: pointer;"><i class='fa fa-arrow-left'></i> Go Back to Search</div>
 </div>
 
 <div id="myNav" class="overlay" style="font-family:arial">
@@ -335,31 +379,31 @@ secondurlsplit.shift();
 secondurl = secondurlsplit.join("?");
 
 google = "https://www.google.com/search?q=" + secondurl;
-bing = "https://bing.com/search?q=" + str;
-yahoo = "https://search.yahoo.com/search?p=" + str;
-yandex = "https://yandex.com/search/?text=" + str;
-foaa = "https://foaa.easysearch.org.uk/search/?s=" + str;
-stnicholas = "https://stnicholaschurchgodstone.easysearch.org.uk/search/?s=" + str;
-stjohns = "https://stjohnsblindleyheath.easysearch.org.uk/search/?s=" + str;
-ststephens = "https://ststephenssouthgodstone.easysearch.org.uk/search/?s=" + str;
-chithurst = "https://stmchithurst.easysearch.org.uk/search/?s=" +str;
-steadham = "https://sipc.easysearch.org.uk/search/?s=" +str;
-guildford = "https://stpeteressharedchurch.easysearch.org.uk/search/?s=" + str;
-kaana = "https://kaana.easysearch.org.uk/search/?s=" + str;
-wikipedia = "https://en.wikipedia.org/w/index.php?go=Go&search=" + str;
-bbc = "https://www.bbc.co.uk/search?q=" + str;
-ebay = "https://www.ebay.co.uk/sch/i.html?_&_nkw=" + str;
-abebooks = "https://www.abebooks.co.uk/servlet/SearchResults?kn=dfghj" + str;
-wob = "https://www.wob.com/en-gb/category/all?search=" + str;
-facebook = "https://facebook.com/" + str;
-instagram = "https://instagram.com/" + str;
-twitter = "https://twitter.com/search?q=" + str;
-youtube = "https://www.youtube.com/results?search_query=" + str;
-pinterest = "https://www.pinterest.co.uk/search/pins/?q=" + str;
-reddit = "https://www.reddit.com/search/?q=" + str;
+bing = "https://bing.com/search?q=" + secondurl;
+yahoo = "https://search.yahoo.com/search?p=" + secondurl;
+yandex = "https://yandex.com/search/?text=" + secondurl;
+foaa = "https://foaa.easysearch.org.uk/search/?s=" + secondurl;
+stnicholas = "https://stnicholaschurchgodstone.easysearch.org.uk/search/?s=" + secondurl;
+stjohns = "https://stjohnsblindleyheath.easysearch.org.uk/search/?s=" + secondurl;
+ststephens = "https://ststephenssouthgodstone.easysearch.org.uk/search/?s=" + secondurl;
+chithurst = "https://stmchithurst.easysearch.org.uk/search/?s=" +secondurl;
+steadham = "https://sipc.easysearch.org.uk/search/?s=" +secondurl;
+guildford = "https://stpeteressharedchurch.easysearch.org.uk/search/?s=" + secondurl;
+kaana = "https://kaana.easysearch.org.uk/search/?s=" + secondurl;
+wikipedia = "https://en.wikipedia.org/w/index.php?go=Go&search=" + secondurl;
+bbc = "https://www.bbc.co.uk/search?q=" + secondurl;
+ebay = "https://www.ebay.co.uk/sch/i.html?_&_nkw=" + secondurl;
+abebooks = "https://www.abebooks.co.uk/servlet/SearchResults?kn=dfghj" + secondurl;
+wob = "https://www.wob.com/en-gb/category/all?search=" + secondurl;
+facebook = "https://facebook.com/" + secondurl;
+instagram = "https://instagram.com/" + secondurl;
+twitter = "https://twitter.com/search?q=" + secondurl;
+youtube = "https://www.youtube.com/results?search_query=" + secondurl;
+pinterest = "https://www.pinterest.co.uk/search/pins/?q=" + secondurl;
+reddit = "https://www.reddit.com/search/?q=" + secondurl;
 searchterm = secondurl.replace(/%20/g, " ");
 
-document.getElementById("pageonload").innerHTML = "<button class='placeholder' style='color:black;cursor: default;font-size:25px;border:3px solid black;background-color:white;'><b>Search</b><i><b> Engine </b></i><b>Select</b></button></br></br><button class='placeholder' style='color:black;cursor: default;font-size:25px;background-color:white;'>You're searching for <i>" + searchterm + "</i>.</button></br></br><button class='placeholder' style='color:black;cursor: default;font-size:25px;background-color:white;'>Choose a search engine to continue:</button></br><button class='google' onclick='window.location.href=`" + google + "`;'><i class='fa fa-google'></i> Google</button><button class='placeholder'></button><button class='bing' onclick='window.location.href=`" + bing + "`;'><i class='fa fa-search'></i> Microsoft Bing</button><button class='placeholder'></button><button class='yahoo' onclick='window.location.href=`" + yahoo + "`;'><i class='fa fa-yahoo'></i> Yahoo</button><button class='placeholder'></button><button class='yandex' onclick='window.location.href=`" + yandex + "`;'><i class='fa fa-search'></i> Yandex</button></br></br><button class='easysearch' onclick='window.location.href=`" + foaa + "`;'><img src='https://foaa.easysearch.org.uk/favicon.ico' style='vertical-align:middle;max-width:20px;'> Friends of Alton Abbey</button><button class='placeholder'></button><button class='easysearch' onclick='window.location.href=`" + stnicholas + "`;'><img src='https://foaa.easysearch.org.uk/favicon.ico' style='vertical-align:middle;max-width:20px;'> St. Nicholas', Godstone</button><button class='placeholder'><button class='easysearch' onclick='window.location.href=`" + stjohns + "`;'><img src='https://foaa.easysearch.org.uk/favicon.ico' style='vertical-align:middle;max-width:20px;'> St. John's, Blindley Heath</button></br><button class='placeholder'></button><button class='easysearch' onclick='window.location.href=`" + ststephens + "`;'><img src='https://foaa.easysearch.org.uk/favicon.ico' style='vertical-align:middle;max-width:20px;'> St. Stephen's, South Godstone</button><button class='placeholder'><button class='easysearch' onclick='window.location.href=`" + steadham + "`;'><img src='https://foaa.easysearch.org.uk/favicon.ico' style='vertical-align:middle;max-width:20px;'> Steadham & Iping</button></br><button class='placeholder'></button><button class='easysearch' onclick='window.location.href=`" + chithurst + "`;'><img src='https://foaa.easysearch.org.uk/favicon.ico' style='vertical-align:middle;max-width:20px;'> St. Mary's, Chithurst</button><button class='placeholder'><button class='easysearch' onclick='window.location.href=`" + kaana + "`;'><img src='https://foaa.easysearch.org.uk/favicon.ico' style='vertical-align:middle;max-width:20px;'> Kaana</button><button class='placeholder'></button><button class='easysearch' onclick='window.location.href=`" + guildford + "`;'><img src='https://foaa.easysearch.org.uk/favicon.ico' style='vertical-align:middle;max-width:20px;'> St. Peter's, Guildford</button></br><button class='special' onclick='window.location.href=`" + wikipedia + "`;'> Wikipedia</button><button class='placeholder'></button><button class='special' onclick='window.location.href=`" + bbc + "`;'> BBC</button><button class='placeholder'></button><button class='shopping' onclick='window.location.href=`" + ebay + "`;'> eBay</button><button class='placeholder'></button><button class='shopping' onclick='window.location.href=`" + abebooks + "`;'> AbeBooks</button><button class='placeholder'></button><button class='shopping' onclick='window.location.href=`" + wob + "`;'> WorldOfBooks</button></br><button class='social' onclick='window.location.href=`" + facebook + "`;'><i class='fa fa-facebook'></i> </button><button class='placeholder'></button><button class='social' onclick='window.location.href=`" + instagram + "`;'><i class='fa fa-instagram'></i></button><button class='placeholder'></button><button class='social' onclick='window.location.href=`" + twitter + "`;'><i class='fa fa-twitter'></i></button><button class='placeholder'></button><button class='social' onclick='window.location.href=`" + youtube + "`;'><i class='fa fa-youtube'></i></button><button class='placeholder'></button><button class='social' onclick='window.location.href=`" + pinterest + "`;'><i class='fa fa-pinterest'></i></button><button class='placeholder'></button><button class='social' onclick='window.location.href=`" + reddit + "`;'><i class='fa fa-reddit'></i></button><title>" + searchterm + " - Search Engine Select</title>";
+document.getElementById("pageonload").innerHTML = "<div id='footer3'><div id='footerback3' onclick='openNav()' style='cursor: pointer;'><b style='font-size:27px;'>Search<i>Engine</i>Select</b></div></div></br></br></br><button class='placeholder' style='color:black;cursor: default;font-size:25px;background-color:white;'>You're searching for <i>" + searchterm + "</i>.</button></br></br><button class='placeholder' style='color:black;cursor: default;font-size:25px;background-color:white;'>Choose a search engine to continue:</button></br><button class='google' onclick='window.location.href=`" + google + "`;'><i class='fa fa-google'></i> Google</button><button class='placeholder'></button><button class='bing' onclick='window.location.href=`" + bing + "`;'><i class='fa fa-search'></i> Microsoft Bing</button><button class='placeholder'></button><button class='yahoo' onclick='window.location.href=`" + yahoo + "`;'><i class='fa fa-yahoo'></i> Yahoo</button><button class='placeholder'></button><button class='yandex' onclick='window.location.href=`" + yandex + "`;'><i class='fa fa-search'></i> Yandex</button></br></br><button class='easysearch' onclick='window.location.href=`" + foaa + "`;'><img src='https://foaa.easysearch.org.uk/favicon.ico' style='vertical-align:middle;max-width:20px;'> Friends of Alton Abbey</button><button class='placeholder'></button><button class='easysearch' onclick='window.location.href=`" + stnicholas + "`;'><img src='https://foaa.easysearch.org.uk/favicon.ico' style='vertical-align:middle;max-width:20px;'> St. Nicholas', Godstone</button><button class='placeholder'><button class='easysearch' onclick='window.location.href=`" + stjohns + "`;'><img src='https://foaa.easysearch.org.uk/favicon.ico' style='vertical-align:middle;max-width:20px;'> St. John's, Blindley Heath</button></br><button class='placeholder'></button><button class='easysearch' onclick='window.location.href=`" + ststephens + "`;'><img src='https://foaa.easysearch.org.uk/favicon.ico' style='vertical-align:middle;max-width:20px;'> St. Stephen's, South Godstone</button><button class='placeholder'><button class='easysearch' onclick='window.location.href=`" + steadham + "`;'><img src='https://foaa.easysearch.org.uk/favicon.ico' style='vertical-align:middle;max-width:20px;'> Steadham & Iping</button></br><button class='placeholder'></button><button class='easysearch' onclick='window.location.href=`" + chithurst + "`;'><img src='https://foaa.easysearch.org.uk/favicon.ico' style='vertical-align:middle;max-width:20px;'> St. Mary's, Chithurst</button><button class='placeholder'><button class='easysearch' onclick='window.location.href=`" + kaana + "`;'><img src='https://foaa.easysearch.org.uk/favicon.ico' style='vertical-align:middle;max-width:20px;'> Kaana</button><button class='placeholder'></button><button class='easysearch' onclick='window.location.href=`" + guildford + "`;'><img src='https://foaa.easysearch.org.uk/favicon.ico' style='vertical-align:middle;max-width:20px;'> St. Peter's, Guildford</button></br><button class='special' onclick='window.location.href=`" + wikipedia + "`;'> Wikipedia</button><button class='placeholder'></button><button class='special' onclick='window.location.href=`" + bbc + "`;'> BBC</button><button class='placeholder'></button><button class='shopping' onclick='window.location.href=`" + ebay + "`;'> eBay</button><button class='placeholder'></button><button class='shopping' onclick='window.location.href=`" + abebooks + "`;'> AbeBooks</button><button class='placeholder'></button><button class='shopping' onclick='window.location.href=`" + wob + "`;'> WorldOfBooks</button></br><button class='social' onclick='window.location.href=`" + facebook + "`;'><i class='fa fa-facebook'></i> </button><button class='placeholder'></button><button class='social' onclick='window.location.href=`" + instagram + "`;'><i class='fa fa-instagram'></i></button><button class='placeholder'></button><button class='social' onclick='window.location.href=`" + twitter + "`;'><i class='fa fa-twitter'></i></button><button class='placeholder'></button><button class='social' onclick='window.location.href=`" + youtube + "`;'><i class='fa fa-youtube'></i></button><button class='placeholder'></button><button class='social' onclick='window.location.href=`" + pinterest + "`;'><i class='fa fa-pinterest'></i></button><button class='placeholder'></button><button class='social' onclick='window.location.href=`" + reddit + "`;'><i class='fa fa-reddit'></i></button><title>" + searchterm + " - Search Engine Select</title>";
 </script>
 
 </body>
