@@ -50,14 +50,20 @@
 </br>
 </br>
 <h1 style="font-family:arial;color:red">Search<i>Engine</i>Select</h1>
-</br></br>
+</br>
 <div>
-<input type="text" id="myText" placeholder="Search for Something..." class="searchbar" style="width:60%;height:30%;font-size:20px"> <button onclick="myFunction()" class="searchbutton" id="myBtn"><i style="font-size:18px;" class="fa fa-rotate-90">&#xf002;</i></button>
+<p id="searchterm"></p>
 </div>
 
 <p style="font-family:arial;">Send a search query to SearchEngineSelect</p>
 </center>
-<p id="demo"></p>
+
+<script>
+var str = window.location.href;
+str = str.substring(str.indexOf("#") + 1);
+surl = str.replace(/%20/g, " ");
+document.getElementById("searchterm").innerHTML = "<input type='text' id='myText' value='" + surl + "' placeholder='Search for Something...' class='searchbar' style='width:60%;height:30%;font-size:20px'> <button onclick='myFunction()' class='searchbutton' id='myBtn'><i style='font-size:18px;' class='fa fa-rotate-90'>&#xf002;</i></button>";
+</script>
 
 <script>
 var input = document.getElementById("myText");
