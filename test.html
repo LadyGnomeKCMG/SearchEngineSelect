@@ -375,13 +375,13 @@ secondurlsplit.shift();
 secondurl = secondurlsplit.join("?");
 searchterm = secondurl.replace(/%20/g, " ");
 
-var thatthing = "window.location.href='https://ladygnomekcmg.github.io/SearchEngineSelect/search.html";
-var gobackurl = thatthing + "#" + searchterm + "'";
+var urlofsearch = "https://ladygnomekcmg.github.io/SearchEngineSelect/search.html#" + searchterm;
+var thatthing = "window.location.href='" + urlofsearch + "'";
 var string = pageurl;
 var substring = "search.html";
 
  if (string.includes(substring)) {
-  greeting = "<div id='footer2'><div id='footerback2' onclick=" + thatthing + " style='cursor: pointer;'><i class='fa fa-arrow-left'></i> Go Back to Search</div></div>";
+  greeting = "<div id='footer2'><div id='footerback2' onclick=" + urlofsearch + " style='cursor: pointer;'><i class='fa fa-arrow-left'></i> Go Back to Search</div></div>";
 } else {
   greeting = "";
 } 
