@@ -366,13 +366,13 @@ function closeNav2() {
 <script>
 var pageurl = window.location.href;
 var str = pageurl;
-arr = str.split("#");
+arr = str.split("?");
 arr.shift();
-str = arr.join("#");
+str = arr.join("?");
 var secondurl = str;
-secondurlsplit = secondurl.split("?");
+secondurlsplit = secondurl.split("#");
 secondurlsplit.shift();
-secondurl = secondurlsplit.join("?");
+secondurl = secondurlsplit.join("#");
 searchterm = secondurl.replace(/%20/g, " ");
 
 var string = pageurl;
